@@ -1,0 +1,36 @@
+.parent-app {
+    display: flex;
+    overflow: hidden;
+}
+
+.main-page {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bar {
+flex: 1;
+display: flex;
+flex-direction: column;
+overflow-y: auto;
+height: 100vh;
+min-width: 300px;
+}
+
+
+.top-bar {
+   flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}   
+
+
+
+
+
+
+

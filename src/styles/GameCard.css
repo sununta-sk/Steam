@@ -1,0 +1,26 @@
+.parent-game-card {
+    border: 1px solid black;
+    display: flex;
+
+}
+
+.game-button {
+    background-color: #6a6a6b;
+    color: #fff;
+    cursor: pointer;
+    flex: 1;    
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+    height: 100px;
+}
+
+.game-button:hover {
+    background-color: #3e3f40;
+}
+
+.game-button:active {
+    background-color: #bababb;
+}
+
+

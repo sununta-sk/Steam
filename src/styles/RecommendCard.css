@@ -1,0 +1,19 @@
+.recommend-card-parent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 200px;
+
+    border: 1px solid #f54141;
+}
+.image-container {
+    background-color: rgb(92, 143, 188);
+    flex: 3;
+}
+
+.price-container {
+
+    background-color: rgb(94, 90, 85);
+    flex: 1;
+}
+
