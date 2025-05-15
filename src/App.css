@@ -1,32 +1,24 @@
-.parent-app {
+.container {
     display: flex;
-    overflow: hidden;
-}
-
-.main-page {
-    flex: 4;
-    display: flex;
-    flex-direction: column;
+    background-color: #a18080;
+    height: 100vh;
 }
 
 .side-bar {
-flex: 1;
-display: flex;
-flex-direction: column;
-overflow-y: auto;
-height: 100vh;
-min-width: 300px;
+    flex: 1;
+    border: 1px solid red;
+    background-color: #c0bbbb;
+}
+
+.main-container {
+    flex: 5;
+    border: 1px solid red;
+    background-color: #6dca61;
 }
 
 
-.top-bar {
-   flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    overflow: hidden;
-}   
+
+
 
 
 

@@ -1,20 +1,14 @@
 import React from 'react';
-import games from '../database/Games';
 import GameCard from './GameCard';
 
 function SideBar(props) {
+
   
   return (
-    <div className={props.className}>
+    <div>
 
-        {games.map((game) => (
-            <GameCard
-                gameName={game.name}
-                setSelectedGame={props.setSelectedGame}
-            />
-        ))}
-        
-        
+      <GameCard gameName = "fornite" setSelectedGame={props.setSelectedGame}/>
+  <GameCard gameName = "PubG" setSelectedGame={props.setSelectedGame}/>
 
     </div>
   );

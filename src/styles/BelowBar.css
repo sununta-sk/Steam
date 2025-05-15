@@ -1,22 +1,104 @@
 .below-bar-parent{
     flex: 2;
-    background-color: darkgrey;
+    background-color: rgb(214, 176, 176);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }  
 
 .recommend-section {
-    background-color: rgb(180, 111, 65);
+    background-color: rgb(39, 38, 37);
     flex: 1;
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    width: 100vw;
-    overflow-x: auto;
+    padding: 20px 20px 5px 20px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+/* Slick carousel custom styles */
+.recommend-section .slick-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.recommend-section .slick-list {
+
+    overflow: hidden;
+}
+
+.recommend-section .slick-slide {
+    padding-left: 5px;
+}
+
+.recommend-section .slick-slide > div {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.recommend-section .slick-dots {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: auto;
+    text-align: left;
+    margin-left: 5px;
+    z-index: 3;
+}
+
+.recommend-section .slick-dots li button:before {
+    color: white;
+}
+
+.recommend-section .slick-dots li.slick-active button:before {
+    color: white;
 }
 
 .other {
     border: 1px solid #000;
     background-color: rgb(61, 100, 135);
     flex: 2;
+    padding: 20px 20px 0 20px;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+/* Force slick arrows to be visible and styled */
+.slick-arrow {
+  z-index: 2;
+  display: block !important;
+  color: white !important;
+
+}
+
+.slick-prev:before, .slick-next:before {
+  color: rgb(209, 188, 188) !important;   /* Change to white if your background is dark */
+  font-size: 32px !important;
+  opacity: 1 !important;
+}
+
+.slick-prev {
+  left: 1px !important;
+  top: 78px !important;
+}
+.slick-next {
+  right: 65px !important;
+  top: 75px !important;
+}
+
+/* Make dots visible and styled */
+.slick-dots {
+    left: 0 !important;
+    top: auto !important;
+    bottom: 0 !important;
+    margin-left: 0;
+    width: auto;
+    text-align: left;
+    z-index: 3;
+}
+
+.slick-dots li button:before {
+  color: rgb(236, 197, 197) !important; /* Or white for dark backgrounds */
+  font-size: 16px;
+  opacity: 1 !important;
 }

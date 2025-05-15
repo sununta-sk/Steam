@@ -1,10 +1,12 @@
 .recommend-card-parent {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 150px;
+    width: 200px;
     min-width: 200px;
-
     border: 1px solid #f54141;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 .image-container {
     background-color: rgb(92, 143, 188);

@@ -1,13 +1,18 @@
 import React from 'react';
 import '../styles/GameCard.css';
-import Button from './Button';
+
 
 function GameCard(props) {
 
+    const handleClick = () => {
+        props.setSelectedGame(props.gameName);
+
+    }
+
     return (
         <div className='parent-game-card'>
-            <Button gameName={props.gameName} className='game-button' setSelectedGame={props.setSelectedGame}/>
+           <button onClick={handleClick}> {props.gameName}</button>
         </div>
-    );
+    )
 }
 export default GameCard;
