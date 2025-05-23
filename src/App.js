@@ -1,55 +1,55 @@
-import React, { useState } from 'react';
-import './App.css';
-import SideBar from './components/SideBar';
-import MainContainer from './components/MainContainer';
+import React, { useState } from "react";
+import SideBar from "./components/SideBar";
+import MainContainer from "./components/MainContainer";
+import games from "./database/Games";
+import MobileSideBar from "./components/MobileSideBar";
 
 function App() {
+  const [selectedGame, setSelectedGame] = useState("");
+  const [showMobileSideBar, setShowMobileSideBar] = useState(false);
 
-  const [selectedGame, setSelectedGame] = useState('hello');
-  const [totalBill, setTotalBill] = useState(4100);
+  const toggleMobileSideBar = () => {
+    setShowMobileSideBar(!showMobileSideBar);
+  };
 
-  const banana = 100;
-const phoneBill = 2000;
-const electricityBill = 2000;
-const waterBill = banana;
+  const image = games[selectedGame]?.image;
 
+  const playBarInformation = [
+    games[selectedGame]?.status || "Not Available",
+    games[selectedGame]?.playTime || "Not Available",
+    games[selectedGame]?.lastPlayed || "Not Available",
+  ];
 
-
-
-const payPhoneBill = () => {
-  if (totalBill > 0) {
-    setTotalBill(totalBill - phoneBill);
-  }
-
-}
-
-const payElectricityBill = () => {
-  if (totalBill > 0) {
-    setTotalBill(totalBill - electricityBill);
-  }
-
-}
-
-const payWaterBill = () => {
-  if (totalBill > 0) {  
-    setTotalBill(totalBill - waterBill);
-  }
-
-}
-
-
+  const gameInfo = games[selectedGame]?.info;
+  const gameReviews = games[selectedGame]?.reviews;
+  const gameRecommended = games[selectedGame]?.recommended;
 
   return (
-    <div className='container'>
-
-      <div className='side-bar'>
-        <SideBar setSelectedGame={setSelectedGame}/>
-      </div>
-   
-      <div className='main-container'>
-        <MainContainer totalBill={totalBill} gameName={selectedGame} payPhoneBill={payPhoneBill} payElectricityBill={payElectricityBill} payWaterBill={payWaterBill}  />
-      </div>
-
+    <div className=" h-screen">
+      {/* <SideBar
+        className="hidden md:block"
+        setSelectedGame={setSelectedGame}
+        games={games}
+      /> */}
+ <MainContainer
+  
+        gameInfo={gameInfo}
+        gameReviews={gameReviews}
+        gameRecommended={gameRecommended}
+        gameName={selectedGame}
+        selectedGame={selectedGame}
+        image={image}
+        playBarInformation={playBarInformation}
+        toggleMobileSideBar={toggleMobileSideBar}
+      />
+      {/* <MobileSideBar
+        className={`absolute w-full bottom-0 bg-gray-800 rounded-t-3xl max-h-[60vh] overflow-y-auto transition-all duration-300 ease-in-out transform ${
+          showMobileSideBar ? 'translate-y-0' : 'translate-y-full'
+        }`}
+        setSelectedGame={setSelectedGame}
+        games={games}
+        toggleMobileSideBar={toggleMobileSideBar}
+      /> */}
     </div>
   );
 }

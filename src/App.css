@@ -1,20 +1,9 @@
-.container {
-    display: flex;
-    background-color: #a18080;
-    height: 100vh;
+@layer components {
+  .app-container {
+    @apply flex;
+  }
 }
 
-.side-bar {
-    flex: 1;
-    border: 1px solid red;
-    background-color: #c0bbbb;
-}
-
-.main-container {
-    flex: 5;
-    border: 1px solid red;
-    background-color: #6dca61;
-}
 
 
 

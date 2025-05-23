@@ -1,26 +1,25 @@
-import React from 'react';
-import '../styles/BelowBar.css';
+import React from "react";
+import PlayBar from "./PlayBar";
+import Information from "./Information";
+import Reviews from "./Reviews";
+import Recommended from "./Recommened";
+import ContentCard from "./ContentCard";
+import ContentSection from "./ContentSection";
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-function ContentDisplay() {
- 
-  const word = "hello";
-  const word2 = "there";
-  
-  let combinedWords = "Button";
-
-
-  const joinWords = () => {
-    combinedWords = word + word2;
-    console.log(combinedWords);
-  }
-
-
+function ContentDisplay(props) {
   return (
-    <div>
- <button onClick={joinWords}>{combinedWords}</button>
+    <div className=" h-screen bg-white">
+      <div className="h-24">
+        <PlayBar
+      
+          selectedGame={props.selectedGame}
+          playBarInformation={props.playBarInformation}
+        />
+      </div>
+
+      <div className=" h-full ">
+        <ContentSection />
+      </div>
     </div>
   );
 }

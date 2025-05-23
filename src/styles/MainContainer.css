@@ -1,18 +1,8 @@
-.main-container {
+.main-container-container {
+    flex: 5;
     display: flex;
     flex-direction: column;
     height: 100vh;
-}
 
-.game-banner {
-    background-color: #f0eaea;
-    border: 1px solid red;
-    flex: 1;
-}
-
-.content-display {
-    background-color: #f0eaea;
-    border: 1px solid red;
-    flex: 4;
 }
 

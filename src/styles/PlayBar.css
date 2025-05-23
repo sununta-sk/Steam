@@ -1,0 +1,11 @@
+.play-bar-container {
+    flex: 1;
+    background-color: #47e47e;
+    max-height: 50px;
+    display: flex;
+}
+
+.childen {
+    flex: 1;
+
+}

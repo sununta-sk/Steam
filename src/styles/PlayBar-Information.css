@@ -1,0 +1,12 @@
+.play-bar-information-container {
+    flex: 1;
+    display: flex;
+}
+
+.play-bar-information-image {
+    flex: 1;
+}
+
+.play-bar-information-text-container {
+    flex: 2;
+}

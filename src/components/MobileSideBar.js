@@ -1,7 +1,7 @@
 import React from 'react';
 import GameCard from './GameCard';
 
-function SideBar(props) {
+function MobileSideBar(props) {
 
   
   return (
@@ -12,11 +12,12 @@ function SideBar(props) {
           gameName={key} 
           buttonName={value.name} 
           setSelectedGame={props.setSelectedGame}
+          toggleMobileSideBar={props.toggleMobileSideBar}
         />
       ))}
     </div>
   );
 }
 
-export default SideBar;
+export default MobileSideBar;
   
